@@ -4,7 +4,18 @@ var mult = 0.001;
 
 function setup() {
 
-  canvas = createCanvas(windowWidth, windowHeight);
+
+  if(windowWidth > 795 && windowHeight > 795){
+
+    canvas = createCanvas(windowWidth, windowHeight);
+
+  }
+  else{
+
+    canvas = createCanvas(windowWidth*4, windowHeight);
+
+  }
+  
   background('#060606');
   angleMode(DEGREES);
   
@@ -34,33 +45,41 @@ function draw() {
   noFill();
 
  
+  time = deltaTime/10;
+  
 
-  for(var i = 0; i < points.length; i++){
 
-    
-   
-    
+  
 
-    var angle = map(noise(points[i].x * mult, points[i].y * mult), 0, 1, 0, 720);
+    for(var i = 0; i < points.length; i++){
 
-    points[i].add(createVector(cos(angle), sin(angle)))
-    
+      var angle = map(noise(points[i].x * mult, points[i].y * mult), 0, 1, 0, 720);
+  
+      points[i].add(createVector(cos(angle), sin(angle)))
+      
+  
+      ellipse(points[i].x*1.1, points[i].y*1.1, .1);
 
-    ellipse(points[i].x*1.1, points[i].y*1.1, .1);
-    strokeWeight(random(.1, 1));
+      strokeWeight(random(.1, 1));
+
     if(i%2 == 0){
-      stroke(random(100, 150), 0, 255);
+      stroke(random(50, 100), 0, 255);
     }
     else if(i%2 == 1){
       stroke(0, 0, random(100, 255));
 
     }
-    
-  }
-  
-}
+      
+      
+      
+      
+    }
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
+
+  
+  
+  
+
+  
 }
 
