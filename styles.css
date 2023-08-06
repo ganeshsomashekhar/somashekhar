@@ -547,7 +547,7 @@
         text-align: center;
         color: var(--hovercolor);
         translate: 50%, 50%;
-        content: "currently unavailable for mobile devices :/";
+        content: "currently unavailable for mobile devices :)";
     }
 
 }
@@ -657,6 +657,7 @@
 
 @media (pointer: coarse) and (orientation: landscape) {
   html {
+    orientation:portrait;
     transform: rotate(-90deg);
     transform-origin: left top;
     width: 100vh;
