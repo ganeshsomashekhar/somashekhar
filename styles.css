@@ -656,7 +656,7 @@
 }
 
 @media (pointer: coarse) and (orientation: landscape) {
-  .html {
+  html {
     transform: rotate(-90deg);
     transform-origin: left top;
     width: 100vh;
