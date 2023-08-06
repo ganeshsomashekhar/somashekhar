@@ -547,7 +547,7 @@
         text-align: center;
         color: var(--hovercolor);
         translate: 50%, 50%;
-        content: "please use a wider aspect ratio.";
+        content: "currently unavailable for mobile devices.";
     }
 
 }
