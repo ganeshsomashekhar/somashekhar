@@ -12,7 +12,7 @@ function setup() {
   }
   else{
 
-    canvas = createCanvas(windowWidth*4, windowHeight);
+    canvas = createCanvas(windowWidth*4, windowHeight*4);
 
   }
   
