@@ -10,9 +10,13 @@ function setup() {
     canvas = createCanvas(windowWidth, windowHeight);
 
   }
-  else{
+  else if ((windowWidth || windowHeight < 795) && (windowWidth < windowHeight)){
 
-    canvas = createCanvas(windowWidth*4, windowHeight*4);
+    canvas = createCanvas(windowWidth*4, windowHeight);
+
+  }
+  else if ((windowWidth || windowHeight < 795) && (windowWidth > windowHeight)){
+    canvas = createCanvas(windowWidth, windowHeight*4);
 
   }
   
